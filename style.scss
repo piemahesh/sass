@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$minSize: 10px;
+
+@mixin createBorderRadius($radius: 5) {
+  border-radius: $radius + px;
+}
+
+@for $i from 1 to 101 {
+  .box-#{$i} {
+    height: $i * $minSize;
+    width: $i * $minSize;
+    background-color: rgb($i * 2, $i, 100);
+    margin: 10px;
+    @include createBorderRadius();
+  }
+}
+
+@for $j from 1 to 101 {
+}
+
+.bg {
+  background-color: red;
+}
